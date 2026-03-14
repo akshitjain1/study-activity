@@ -1,0 +1,29 @@
+name: Study Activity Bot
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Run bot
+        run: python bot.py
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "Akshit Jain"
+          git config --global user.email "your-email@example.com"
+          git add .
+          git commit -m "Daily study update" || echo "No changes"
+          git push
