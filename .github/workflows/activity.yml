@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
@@ -25,5 +26,5 @@ jobs:
           git config --global user.name "Akshit Jain"
           git config --global user.email "akshitjainonly1@gmail.com"
           git add .
-          git commit -m "Daily study update" || echo "No changes"
+          git commit -m "Daily study update" || echo "No changes to commit"
           git push
