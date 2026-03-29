@@ -1,5 +1,11 @@
 {
-  "dsa": ["Complete Hashing and revise Step 1 the basics"],
-  "projects": ["Planning new patent"],
-  "learning": ["Watched OS video lecture 3 and 4 and STL in CPP"]
+  "dsa": [
+    "Completed Hashing and revised Step 1 basics"
+  ],
+  "projects": [
+    "Planned new patent idea for AI-based system"
+  ],
+  "learning": [
+    "Watched OS lectures 3 & 4 and studied STL in C++"
+  ]
 }
