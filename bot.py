@@ -5,21 +5,54 @@ import os
 today = str(datetime.date.today())
 log_file = f"logs/{today}.md"
 
-# create logs folder if it doesn't exist
+# Ensure logs folder exists
 os.makedirs("logs", exist_ok=True)
 
-# read activity file
+# Load activity data
 with open("activity.json") as f:
     data = json.load(f)
 
-activities = data["dsa"] + data["projects"] + data["learning"]
+dsa = data.get("dsa", [])
+projects = data.get("projects", [])
+learning = data.get("learning", [])
 
-# write daily log
+# Write structured log
 with open(log_file, "w") as f:
-    f.write(f"# Learning Log - {today}\n\n")
+    f.write(f"# 📅 Learning Log - {today}\n\n")
 
-    if activities:
-        for act in activities:
-            f.write(f"- {act}\n")
+    if not (dsa or projects or learning):
+        f.write("⚠️ No significant activity today.\n")
+        f.write("Reviewed previous concepts and notes and planned upcoming tasks.\n")
     else:
-        f.write("No coding today. Reviewed previous notes and planned upcoming tasks.\n")
+        if dsa:
+            f.write("## 🧠 DSA Practice\n")
+            for item in dsa:
+                f.write(f"- {item}\n")
+            f.write("\n")
+
+        if projects:
+            f.write("## 🚀 Projects\n")
+            for item in projects:
+                f.write(f"- {item}\n")
+            f.write("\n")
+
+        if learning:
+            f.write("## 📚 Learning\n")
+            for item in learning:
+                f.write(f"- {item}\n")
+            f.write("\n")
+
+    # Optional summary (very impressive)
+    total_tasks = len(dsa) + len(projects) + len(learning)
+    f.write("---\n")
+    f.write(f"✅ Total productive tasks: {total_tasks}\n")
+
+# 🔥 Reset activity after logging (IMPORTANT)
+reset_data = {
+    "dsa": [],
+    "projects": [],
+    "learning": []
+}
+
+with open("activity.json", "w") as f:
+    json.dump(reset_data, f, indent=2)
