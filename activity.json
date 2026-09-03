@@ -1,5 +1,11 @@
 {
-  "dsa": [],
+  "dsa": [
+    "Best, worst, average — 15 min (solved: 704. Binary Search, 28. Find the Index of the First Occurrence in a String)",
+    "Big-O notation — 42 min (solved: 217. Contains Duplicate, 1. Two Sum, 268. Missing Number)"
+  ],
   "projects": [],
-  "learning": []
+  "learning": [
+    "Instruction execution — 60 min",
+    "Storage — 33 min"
+  ]
 }
