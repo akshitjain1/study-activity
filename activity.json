@@ -1,6 +1,10 @@
 {
-  "dsa": [],
+  "dsa": [
+    "Prefix sums — 78 min (solved: 724. Find Pivot Index, 303. Range Sum Query - Immutable, 560. Subarray Sum Equals K)"
+  ],
   "projects": [],
-  "learning": [],
+  "learning": [
+    "Interpreter — 22 min"
+  ],
   "journal": []
 }
