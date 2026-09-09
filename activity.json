@@ -1,14 +1,6 @@
 {
-  "dsa": [
-    "String frequency — 87 min (solved: 242. Valid Anagram, 383. Ransom Note, 49. Group Anagrams)"
-  ],
+  "dsa": [],
   "projects": [],
-  "learning": [
-    "Threads — 41 min"
-  ],
-  "journal": [
-    "Learned — Threads, Types of thread , Its working. String Frequency Basic of neural Network",
-    "Stuck on — Leetcode 49. Group Anagrams ⭐⭐⭐ https://leetcode.com/problems/group-anagrams/description/",
-    "Tomorrow — Complete Arrays and String on Neetcode."
-  ]
+  "learning": [],
+  "journal": []
 }
